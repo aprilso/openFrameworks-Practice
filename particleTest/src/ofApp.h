@@ -2,6 +2,42 @@
 
 #include "ofMain.h"
 
+
+class Particle{
+public: 
+    float x;
+    float y;
+    float velocityX;
+    float velocityY;
+    float speed;
+    
+    void setup(){
+        x = ofGetWidth()*0.5;
+        y = ofGetHeight()*0.5;
+        speed = 10;
+        velocityX = speed;
+        velocityY = speed;
+    }
+    void update(){
+        x = x + velocityX;
+        if(x > ofGetWidth()){
+            velocityX = -speed;
+        } else if (x < 0){
+            velocityX = speed;
+        }
+        
+        y = y + velocityY;
+        if(y > ofGetHeight()){
+            velocityY = -speed;
+        } else if (y < 0){
+            velocityY = speed;
+        }
+    }
+    void draw(){
+        ofDrawCircle(x, y, 10);
+    }
+};
+
 class ofApp : public ofBaseApp{
 
 	public:
@@ -21,10 +57,7 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
     
-        float x;
-        float y;
-        float velocityX;
-        float velocityY;
-        float speed;
+    Particle myparticle; //class is Particle, myparticle is the object. Class is the larger thing
+    
     
 };
