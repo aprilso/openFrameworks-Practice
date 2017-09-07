@@ -10,6 +10,7 @@ public:
     float velocityX;
     float velocityY;
     float speed;
+    float radius; //it's a public class variable
     
     void setup(){
         x = ofGetWidth()*0.5;
@@ -17,6 +18,7 @@ public:
         speed = 10;
         velocityX = speed;
         velocityY = speed;
+        radius = 20;
     }
     void update(){
         x = x + velocityX;
@@ -32,9 +34,11 @@ public:
         } else if (y < 0){
             velocityY = speed;
         }
+        radius = radius + sin(ofGetElapsedTimef());
+        
     }
     void draw(){
-        ofDrawCircle(x, y, 10);
+        ofDrawCircle(x, y, radius);
     }
 };
 
