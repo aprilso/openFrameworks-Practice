@@ -12,9 +12,9 @@ public:
     float speed;
     float radius; //it's a public class variable
     
-    void setup(){
-        x = ofGetWidth()*0.5;
-        y = ofGetHeight()*0.5;
+    void setup(float xInput, float yIn){
+        x = xInput;
+        y = yIn;
         speed = 10;
         velocityX = speed;
         velocityY = speed;
@@ -34,7 +34,7 @@ public:
         } else if (y < 0){
             velocityY = speed;
         }
-        radius = radius + sin(ofGetElapsedTimef());
+        //radius = radius + sin(ofGetElapsedTimef());
         
     }
     void draw(){
@@ -62,6 +62,6 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
     
     Particle myparticle; //class is Particle, myparticle is the object. Class is the larger thing
-    
+    Particle myparticle2;
     
 };
