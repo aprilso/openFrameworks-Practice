@@ -61,7 +61,7 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
     
-    Particle myparticle; //class is Particle, myparticle is the object. Class is the larger thing
-    Particle myparticle2;
+    Particle myparticles[100]; //class is Particle, myparticle is the object. Class is the larger thing
+   
     
 };
