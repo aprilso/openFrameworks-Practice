@@ -5,12 +5,18 @@ void ofApp::setup(){
 
     x = ofGetWidth()*0.5;
     y = ofGetHeight()*0.5;
+    velocityX = 1;
     
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
+    x = x + velocityX;
+    if(x > ofGetWidth()){
+        velocityX = -1;
+        
 
+    }
 }
 
 //--------------------------------------------------------------
