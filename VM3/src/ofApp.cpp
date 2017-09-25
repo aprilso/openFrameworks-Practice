@@ -29,26 +29,26 @@ void ofApp::draw(){
     float sq4;
     
     
-    for (int i = 0; i < 10; i++){
-        for (int j = 0; j < 10; j++){
-            ofDrawRectangle(centerx, centery, i*square, j*square);
+    for (int i = 0; i < 5; i++){
+        for (int j = 0; j < 5; j++){
+            ofDrawRectangle(centerx-(0.5*i*square), centery-(0.5*i*square), i*square, i*square);
         
 
     
     centerx = ofGetWidth()/2;
-    centery = ofGetHeight()/2 + ofRandom(300);
-    square = ofRandom(200);
-    square2 = 400;
-    sq3 = ofRandom(150);
-    sq4 = 300;
+    centery = ofGetHeight()/2;
+    square = ofRandom(i+200);
+//    square2 = 400;
+//    sq3 = ofRandom(150);
+//    sq4 = 300;
     
-    
-    
-    
-    ofDrawRectangle(centerx-(0.5*square), centery-(0.5*square), square, square);
-    ofDrawRectangle(centerx-(0.5*square2), centery-(0.5*square2), square2, square2);
-    ofDrawRectangle(centerx-(0.5*sq3), centery-(0.5*sq3), sq3, sq3);
-    ofDrawRectangle(centerx-(0.5*sq4), centery-(0.5*sq4), sq4, sq4);
+//    
+//    
+//    
+//    ofDrawRectangle(centerx-(0.5*square), centery-(0.5*square), square, square);
+//    ofDrawRectangle(centerx-(0.5*square2), centery-(0.5*square2), square2, square2);
+//    ofDrawRectangle(centerx-(0.5*sq3), centery-(0.5*sq3), sq3, sq3);
+//    ofDrawRectangle(centerx-(0.5*sq4), centery-(0.5*sq4), sq4, sq4);
    
         }
     }
