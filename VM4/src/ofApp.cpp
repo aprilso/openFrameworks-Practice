@@ -3,7 +3,6 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
 
-
 }
 
 //--------------------------------------------------------------
@@ -13,55 +12,28 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-    
+
     ofBackground(255,255,255);
     ofSetColor(0, 0, 0);
     ofNoFill();
     ofSeedRandom(100); //so it doesn't animate
-
     
     float centerx;
     float centery;
     float square;
     
-//    float square2;
-//    float sq3;
-//    float sq4;
-//    
-//    
-    for (int i = 0; i < 8; i++){
-        for (int j = 0; j < 6; j++){
-            ofDrawRectangle(centerx-(0.5*i*square), centery-(0.5*i*square)+ofRandom(20,120),i*square,i*square);
-        
-
-    
-    centerx = ofGetWidth()/2;
-    centery = ofGetHeight()/2;
-    square = (ofRandom(20)*5);
+    for (int i = 0; i < 30; i++){
+//        for (int j = 0; j < 5; j++){
+            ofDrawRectangle(centerx-(0.5*i*square), centery-(0.5*i*square)+ofRandom(20, 100),i*square,i*square);
             
             
-//    square2 = 400;
-//    sq3 = ofRandom(150);
-//    sq4 = 300;
-    
-//    
-//    
-//    
-//    ofDrawRectangle(centerx-(0.5*square), centery-(0.5*square), square, square);
-//    ofDrawRectangle(centerx-(0.5*square2), centery-(0.5*square2), square2, square2);
-//    ofDrawRectangle(centerx-(0.5*sq3), centery-(0.5*sq3), sq3, sq3);
-//    ofDrawRectangle(centerx-(0.5*sq4), centery-(0.5*sq4), sq4, sq4);
-   
-        }
+            
+            centerx = ofGetWidth()/2;
+            centery = ofGetHeight()/2;
+            square = 20;  //(ofRandom(20)*10);
+            
+//        }
     }
-    
-//      for (int i = 0; i < 10; i++){
-//            for (int j = 0; j < 10; j++){
-//    ofDrawRectangle(centerx, centery, i*square, j*square);
-//
-//      }
-//      }
-//  
 }
 
 //--------------------------------------------------------------
